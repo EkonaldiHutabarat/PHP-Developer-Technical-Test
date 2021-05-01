@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <!DOCTYPE html>
@@ -10,16 +10,75 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="col-md-12 mt-5">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Dashboard</h3>
+<div class="main">
+        <div class="wrap">
+            <div class="section group">
+                <div class="cont ">
+                    <h2 class="head">Rekomendasi</h2>
+                    <div class="top-box">
+                        <div class="col_1_of_3 span_1_of_3">
+                            <a href="single.html">
+                                <div class="inner_content clearfix">
+                                    <div class="product_image">
+                                        <img src="{{asset('template/web/images/5 cm.jpg')}}" alt=""/>
+                                    </div>
+                                    <div class="price">
+                                        <div class="cart-left">
+                                            <p class="title">5 Cm</p>
+                                            <div class="price1">
+                                                <span class="actual">Rp. 80.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-right"> </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <a href="single.html">
+                                <div class="inner_content clearfix">
+                                    <div class="product_image">
+                                        <img src="{{asset('template/web/images/koala kumal.jpg')}}" alt=""/>
+                                    </div>
+                                    <div class="price">
+                                        <div class="cart-left">
+                                            <p class="title">Koala Kumal</p>
+                                            <div class="price1">
+                                                <span class="actual">Rp. 60.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-right"> </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col_1_of_3 span_1_of_3">
+                            <a href="single.html">
+                                <div class="inner_content clearfix">
+                                    <div class="product_image">
+                                        <img src="{{asset('template/web/images/perahu kertas.jpg')}}" alt=""/>
+                                    </div>
+                                    <div class="price">
+                                        <div class="cart-left">
+                                            <p class="title">Perahu Kertas</p>
+                                            <div class="price1">
+                                                <span class="actual">Rp. 75.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="cart-right"> </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5>Selamat datang di halaman dashboard, <strong>{{ Auth::user()->name }}</strong></h5>
-                    <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
-                </div>
+
+                <div class="clear"></div>
             </div>
         </div>
     </div>

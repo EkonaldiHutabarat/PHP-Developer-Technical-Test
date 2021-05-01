@@ -21,7 +21,7 @@ Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::get('register', [AuthController::class, 'showFormRegister'])->name('register');
 Route::post('register', [AuthController::class, 'register']);
- 
+
 Route::group(['middleware' => 'auth'], function () {
  
     Route::get('home', [HomeController::class, 'home'])->name('home');
@@ -29,3 +29,29 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('homeAdmin',[HomeController::class,'adminHome'])->name('adminHome');
  
 });
+
+Route::get('/komik', function () {
+    return view('frontend/komik');
+});
+Route::get('/novel', function () {
+    return view('frontend/novel');
+});
+Route::get('/biografi', function () {
+    return view('frontend/biografi');
+});
+Route::get('/cerpen', function () {
+    return view('frontend/cerpen');
+});
+Route::get('/ensiklopedia', function () {
+    return view('frontend/ensiklopedia');
+});
+Route::get('/dongeng', function () {
+    return view('frontend/dongeng');
+});
+Route::get('/biografi', function () {
+    return view('frontend/biografi');
+});
+Route::get('/about', function () {
+    return view('frontend/about');
+}); 
+

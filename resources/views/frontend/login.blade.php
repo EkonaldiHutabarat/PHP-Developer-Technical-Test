@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 
@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-   
 </head>
 <body>
     <div class="container">
@@ -18,15 +17,14 @@
                 <div class="card-header">
                     <h3 class="text-center">Form Login</h3>
                 </div>
-                <form action="{{ route('login') }}" method="post">
+                <form action="login" method="post">
                 @csrf
                 <div class="card-body">
                     @if(session('errors'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                             Something it's wrong:
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+                                <span aria-@endsection
                             <ul>
                             @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -35,9 +33,7 @@
                         </div>
                     @endif
                     @if (Session::has('success'))
-                        <div class="alert alert-success">
-                            {{ Session::get('success') }}
-                        </div>
+                        <div cla@endsection
                     @endif
                     @if (Session::has('error'))
                         <div class="alert alert-danger">
