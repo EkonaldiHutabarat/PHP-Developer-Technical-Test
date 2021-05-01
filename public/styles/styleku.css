@@ -1,0 +1,40 @@
+*{margin: 0px auto;}
+html,body{
+    height: 100%;
+}
+.header{
+    background: #0cf;
+    padding: 35px;
+}
+.container{
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+}
+
+.content{
+    padding: 10px;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    background: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+}
+
+.menu li{
+ float: left;
+ padding: 0px 28px 0px 0px;
+ list-style: none;
+ line-height: 2px;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
