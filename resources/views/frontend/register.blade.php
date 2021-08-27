@@ -47,7 +47,6 @@
                         </div>
                         <div class="">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
-
                         </div>
                     </div>
                     <p class="text-center"><a href="{{ route('login') }}">Login</a>

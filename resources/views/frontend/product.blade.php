@@ -12,16 +12,17 @@
 </head>
 
 <body>
-    <form>
+    <form method="post" action="{{ route('product') }}">
+        @csrf
         <div class="card-body">
             <div class="form-group" style="margin-bottom: 10px;">
                 <h5><strong>Product Page</strong></h5>
             </div>
             <div class="form-group">
-                <textarea  name="number" class="form-control" placeholder="Product"></textarea>
+                <textarea name="mobile_number" class="form-control" placeholder="Product"></textarea>
             </div>
             <div class="form-group">
-                <textarea  name="value" class="form-control" placeholder="Shipping Address"></textarea>
+                <textarea name="shipping_address" class="form-control" placeholder="Shipping Address"></textarea>
             </div>
             <div class="form-group">
                 <input type="text" name="price" class="form-control" placeholder="Price">
