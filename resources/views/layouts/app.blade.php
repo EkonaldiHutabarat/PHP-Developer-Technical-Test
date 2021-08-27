@@ -43,7 +43,7 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="col-md-4 offset-md-4 mt-5">
+            <div class="col-md-4 offset-md-4 mt-2">
                 <div class="card" style="width: 20rem; height:30rem;">
                     <div class="card-header">
                         <ul>

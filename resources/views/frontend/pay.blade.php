@@ -14,26 +14,14 @@
 <body>
     <form>
         <div class="card-body">
-            <div class="form-group" style="margin-bottom: 5px;">
-                <h5><strong>notif sukses</strong></h5>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <h5><strong>Pay your order</strong></h5>
             </div>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td>Order no.</td>
-                        <td></td>
-                        <td>123456789</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td></td>
-                        <td>50.000</td>
-                    </tr>
-
-                </tbody>
-            </table>
-            <div class="form-group" style="padding-top: 50%;">
-                <button type="submit" class="btn btn-primary btn-block">Pay No</button>
+            <div class="form-group">
+                <input type="text" name="order_no" class="form-control" placeholder="Order no">
+            </div>
+            <div class="form-group" style="padding-top: 30%;">
+                <button type="submit" class="btn btn-primary btn-block">Pay now</button>
             </div>
         </div>
     </form>
