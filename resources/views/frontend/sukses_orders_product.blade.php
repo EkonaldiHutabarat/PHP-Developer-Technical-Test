@@ -20,7 +20,7 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <td>Order no.</td>
+                        <td>Order no</td>
                         <td></td>
                         <td>123456789</td>
                     </tr>
