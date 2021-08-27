@@ -17,7 +17,7 @@
                     <h3>Dashboard</h3>
                 </div>
                 <div class="card-body">
-                    <h5>Selamat datang di halaman dashboard, <strong>{{ Auth::user()->name }}</strong></h5>
+                    <h5>Hallo admin, <strong>{{ Auth::user()->name }}</strong></h5>
                     <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
                 </div>
             </div>

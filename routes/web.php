@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PrepaidController;
 use App\Http\Controllers\IndexController;
 
 /*
@@ -23,39 +23,16 @@ Route::get('register', [AuthController::class, 'showFormRegister'])->name('regis
 Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth'], function () {
- 
-    Route::get('home', [HomeController::class, 'home'])->name('home');
+
+    Route::get('prepaid', [PrepaidController::class, 'prepaid'])->name('prepaid');
+    Route::get('product', [PrepaidController::class, 'product'])->name('product');
+    Route::get('pay', [PrepaidController::class, 'pay'])->name('pay');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('homeAdmin',[HomeController::class,'adminHome'])->name('adminHome');
- 
+    Route::get('homeAdmin',[PrepaidController::class,'adminHome'])->name('adminHome');
+
 });
 
-Route::get('/komik', function () {
-    return view('frontend/komik');
-});
-Route::get('/novel', function () {
-    return view('frontend/novel');
-});
-Route::get('/biografi', function () {
-    return view('frontend/biografi');
-});
-Route::get('/cerpen', function () {
-    return view('frontend/cerpen');
-});
-Route::get('/ensiklopedia', function () {
-    return view('frontend/ensiklopedia');
-});
-Route::get('/dongeng', function () {
-    return view('frontend/dongeng');
-});
-Route::get('/biografi', function () {
-    return view('frontend/biografi');
-});
-Route::get('/about', function () {
-    return view('frontend/about');
-}); 
-
-Route::get('/contact', function () {
-    return view('frontend/contact');
-}); 
+// Route::get('/product', function () {
+//     return view('frontend/prouct');
+// });
 
