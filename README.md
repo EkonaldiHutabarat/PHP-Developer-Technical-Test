@@ -1,6 +1,6 @@
 ### How to run project
 
-- Install PHP versi 8
+- Install PHP 8.0.8
 - Install Mysql
 - Install Xampp for windows or Lampp for Ubuntu
 - git clone project
