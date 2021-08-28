@@ -19,7 +19,7 @@
                 <h5><strong>Product Page</strong></h5>
             </div>
             <div class="form-group">
-                <textarea name="mobile_number" class="form-control" placeholder="Product"></textarea>
+                <textarea name="name_product" class="form-control" placeholder="Product"></textarea>
             </div>
             <div class="form-group">
                 <textarea name="shipping_address" class="form-control" placeholder="Shipping Address"></textarea>

@@ -27,11 +27,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('prepaid', [PrepaidController::class, 'prepaid'])->name('prepaid');
     Route::get('product', [ProductController::class, 'product'])->name('product');
-    Route::get('sukses_orders_balance', [PrepaidController::class, 'createOrder'])->name('sukses_orders_balance');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('homeAdmin',[PrepaidController::class,'adminHome'])->name('adminHome');
     Route::get('pay', [IndexController::class, 'pay'])->name('pay');
     Route::post('product', [ProductController::class, 'productOrder']);
+    Route::post('prepaid', [PrepaidController::class, 'balanceOrder']);
 });
 
 

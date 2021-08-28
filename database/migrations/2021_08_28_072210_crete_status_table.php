@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProducsTable extends Migration
+class CreteStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateProducsTable extends Migration
      */
     public function up()
     {
-        Schema::create('producs', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name_product');
-            $table->string('shipping_address');
-            $table->string('price');
-            $table->integer('order_id');
+        Schema::create('status', function (Blueprint $table) {
+            $table->bigIncrements('id_status');
+            $table->string('type_status');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateProducsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('producs');
+        //
     }
 }

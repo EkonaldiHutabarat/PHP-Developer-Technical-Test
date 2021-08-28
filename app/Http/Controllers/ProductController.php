@@ -16,15 +16,16 @@ class ProductController extends Controller
             'shipping_address' =>'required|min:10|max:150',
             'price' => 'required|integer',
         ]);
-        Product::create($request->all());
-        return redirect()->route('/product')
-            ->with('success', ' Berhasil');
-        // $product = new Product;
-        // $product->name_product = ($request->name_product);
-        // $product->shipping_address = ($request->shipping_address);
-        // $product->price = ($request->price);
-        // $simpan = $product->save();
-
+        // Product::create($request->all());
         // return view('frontend/sukses_orders_product');
+
+        $product = new Product;
+        $product->name_product = ($request->name_product);
+        $product->shipping_address = ($request->shipping_address);
+        $product->price = ($request->price);
+        $product->save();
+
+        return view('frontend/sukses_orders_product');
+
     }
 }
