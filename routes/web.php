@@ -24,14 +24,24 @@ Route::get('register', [AuthController::class, 'showFormRegister'])->name('regis
 Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth'], function () {
-
-    Route::get('prepaid', [PrepaidController::class, 'prepaid'])->name('prepaid');
-    Route::get('product', [ProductController::class, 'product'])->name('product');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('homeAdmin',[PrepaidController::class,'adminHome'])->name('adminHome');
-    Route::get('pay', [IndexController::class, 'pay'])->name('pay');
+
+    //Prepaid balance
+    Route::get('prepaid', [PrepaidController::class, 'prepaid'])->name('prepaid');
+    Route::post('prepaid', [PrepaidController::class, 'Order']);
+
+
+    //Product Page
+    Route::get('product', [ProductController::class, 'product'])->name('product');
     Route::post('product', [ProductController::class, 'productOrder']);
-    Route::post('prepaid', [PrepaidController::class, 'balanceOrder']);
+
+    Route::get('pay/{id}', [PrepaidController::class, 'payNow'])->name('pay');
+
+
+
+
+
 });
 
 

@@ -16,16 +16,22 @@ class ProductController extends Controller
             'shipping_address' =>'required|min:10|max:150',
             'price' => 'required|integer',
         ]);
-        // Product::create($request->all());
-        // return view('frontend/sukses_orders_product');
-
-        $product = new Product;
-        $product->name_product = ($request->name_product);
-        $product->shipping_address = ($request->shipping_address);
-        $product->price = ($request->price);
-        $product->save();
-
+        $messages = [
+            'name_product.required'         => 'Minimal 10 karater',
+            'shipping_address.min'              => 'Minimal 10 karakter',
+            'price.required'        => 'Required Digit only',
+        ];
+        Product::create($request->all(), $request, $messages);
         return view('frontend/sukses_orders_product');
+
+
+        // $product = new Product;
+        // $product->name_product = ($request->name_product);
+        // $product->shipping_address = ($request->shipping_address);
+        // $product->price = ($request->price);
+        // $product->save();
+
+        // return view('frontend/sukses_orders_product');
 
     }
 }

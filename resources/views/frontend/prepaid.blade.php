@@ -10,6 +10,7 @@
     <title>Dashboard</title>
 
 </head>
+
 <body>
     <form method="post" action="{{ route('prepaid') }}">
         @csrf
@@ -21,7 +22,14 @@
                 <input name="mobile_number" class="form-control" placeholder="Mobile Number"></input>
             </div>
             <div class="form-group">
-                <input name="value" class="form-control" placeholder="Value"></input>
+                <!-- <input name="value" class="form-control" placeholder="Value"></input> -->
+                <select name="value" class="form-control">
+                <option>Value</option>
+                    @foreach ($balances as $item)
+                    <option value="{{$item->value}}">{{$item->value}}</option>
+                    @endforeach
+
+                </select>
             </div>
             <div class="form-group" style="padding-top: 10%;">
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -30,6 +38,7 @@
         </div>
     </form>
 </body>
+
 </html>
 @endsection
 

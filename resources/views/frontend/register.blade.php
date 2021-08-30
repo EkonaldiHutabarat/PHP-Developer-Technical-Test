@@ -41,10 +41,6 @@
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password_confirmation" class="form-control"
-                                placeholder="Password">
-                        </div>
                         <div class="">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </div>

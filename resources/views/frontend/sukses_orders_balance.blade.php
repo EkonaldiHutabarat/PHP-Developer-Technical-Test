@@ -15,31 +15,29 @@
     <form>
         <div class="card-body">
             <div class="form-group">
-                <h5><strong>sukses</strong></h5>
+                <h5><strong>Sukses</strong></h5>
             </div>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td>Order no.</td>
-                        <td></td>
-                        <td>123456789</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td></td>
-                        <td>50.000</td>
-                    </tr>
+            <ul class="list-group">
+            @foreach ($prepaids as $item)
+                <li class="group-item d-flex justify-content-between align-items-center">
+                    Order no
+                    <span class="badge badge-pill">{{$item->id}}</span>
+                </li>
+                <li class="group-item d-flex justify-content-between align-items-center">
+                    Total
+                    <span class="badge badge-pill">{{$item->value}}</span>
+                </li>
+                <li>
+                <p>
+                    Your mobile phone number {{$item->mobile_number}} will receive Rp {{$item->value}}
+                </p>
+                </li>
 
-                </tbody>
-            </table>
-            <div>
-            <p>
-            Your mobile phone number
-                receive Rp {value}
-            </p>
-            </div>
+            @endforeach
+            </ul>
             <div class="form-group" style="padding-top: 20%;">
-                <button type="submit" class="btn btn-primary btn-block">Pay Now</button>
+                <!-- <button type="submit" class="btn btn-primary btn-block">Pay Now</button> -->
+                <a class="btn btn-primary btn-block" href="paynow/{{$item->id}}">Pay Now</a>
             </div>
 
         </div>

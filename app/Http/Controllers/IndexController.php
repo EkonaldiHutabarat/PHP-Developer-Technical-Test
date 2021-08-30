@@ -9,7 +9,4 @@ class IndexController extends Controller
     public function index(){
         return view('frontend/register');
     }
-    public function pay(){
-        return view('frontend/pay');
-    }
 }
