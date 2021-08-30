@@ -23,10 +23,12 @@ class PrepaidController extends Controller
             'value'=> 'required',
         ]);
         Prepaid::create($request->all());
+        // Prepaid::find($id);
         $prepaids = Prepaid::all();
         return view('frontend/sukses_orders_balance', compact('prepaids'));
     }
-    // public function orderDetail(Prepaid $prepaid){
-    //     return view('frontend/sukses_orders_balance');
-    // }
+    public function payNow(){
+        $prepaids = Prepaid::all();
+        return view('frontend/paybalance', compact('prepaids'));
+    }
 }

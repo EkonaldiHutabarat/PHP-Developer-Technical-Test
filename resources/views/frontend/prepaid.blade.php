@@ -22,7 +22,6 @@
                 <input name="mobile_number" class="form-control" placeholder="Mobile Number"></input>
             </div>
             <div class="form-group">
-                <!-- <input name="value" class="form-control" placeholder="Value"></input> -->
                 <select name="value" class="form-control">
                 <option>Value</option>
                     @foreach ($balances as $item)

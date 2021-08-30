@@ -12,32 +12,29 @@
 </head>
 
 <body>
-    <form>
+    <form action="{{ route('payproduct') }}" method="get">
         <div class="card-body">
             <div class="form-group">
                 <h5><strong>sukses</strong></h5>
             </div>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td>Order no</td>
-                        <td></td>
-                        <td>123456789</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td></td>
-                        <td>50.000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <p>
-                {product_name} that costs {price} will
-                    be shipped to :
-                    {shipping_address}
-                    only after you pay
-                </p>
+            <ul class="list-group">
+                @foreach ($products as $item)
+                <li class="group-item d-flex justify-content-between align-items-center">
+                    Order no.
+                    <span class="badge badge-pill">{{$item->id}}</span>
+                </li>
+                <li class="group-item d-flex justify-content-between align-items-center">
+                    Total
+                    <span class="badge badge-pill">Rp {{$item->price}}</span>
+                </li>
+                <li>
+                    <p>
+                    {{$item->name_product}} that costs {{$item->price}} will be shipped to : {{$item->shipping_address}} only after you pay
+                    </p>
+                </li>
+
+                @endforeach
+            </ul>
             </div>
             <div class="form-group" style="padding-top: 20%;">
                 <button type="submit" class="btn btn-primary btn-block">Pay Now</button>

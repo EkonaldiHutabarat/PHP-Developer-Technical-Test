@@ -30,13 +30,14 @@ Route::group(['middleware' => 'auth'], function () {
     //Prepaid balance
     Route::get('prepaid', [PrepaidController::class, 'prepaid'])->name('prepaid');
     Route::post('prepaid', [PrepaidController::class, 'Order']);
+    Route::get('paybalance', [PrepaidController::class, 'payNow'])->name('paybalance');
 
 
     //Product Page
     Route::get('product', [ProductController::class, 'product'])->name('product');
     Route::post('product', [ProductController::class, 'productOrder']);
+    Route::get('payproduct', [ProductController::class, 'payNow'])->name('payproduct');
 
-    Route::get('pay/{id}', [PrepaidController::class, 'payNow'])->name('pay');
 
 
 

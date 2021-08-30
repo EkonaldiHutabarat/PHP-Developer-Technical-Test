@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <form>
+    <form action="{{ route('paybalance') }}" method="get">
+        @csrf
         <div class="card-body">
             <div class="form-group">
                 <h5><strong>Sukses</strong></h5>
@@ -20,12 +21,12 @@
             <ul class="list-group">
             @foreach ($prepaids as $item)
                 <li class="group-item d-flex justify-content-between align-items-center">
-                    Order no
+                    Order no.
                     <span class="badge badge-pill">{{$item->id}}</span>
                 </li>
                 <li class="group-item d-flex justify-content-between align-items-center">
                     Total
-                    <span class="badge badge-pill">{{$item->value}}</span>
+                    <span class="badge badge-pill">Rp {{$item->value}}</span>
                 </li>
                 <li>
                 <p>
@@ -36,8 +37,8 @@
             @endforeach
             </ul>
             <div class="form-group" style="padding-top: 20%;">
-                <!-- <button type="submit" class="btn btn-primary btn-block">Pay Now</button> -->
-                <a class="btn btn-primary btn-block" href="paynow/{{$item->id}}">Pay Now</a>
+                <button type="submit" class="btn btn-primary btn-block">Pay Now</button>
+                <!-- <a class="btn btn-primary btn-block" href="paynow/{{$item->id}}">Pay Now</a> -->
             </div>
 
         </div>

@@ -22,16 +22,13 @@ class ProductController extends Controller
             'price.required'        => 'Required Digit only',
         ];
         Product::create($request->all(), $request, $messages);
-        return view('frontend/sukses_orders_product');
+        $products = Product::all();
+        return view('frontend/sukses_orders_product', compact('products'));
 
+    }
+    public function payNow(){
 
-        // $product = new Product;
-        // $product->name_product = ($request->name_product);
-        // $product->shipping_address = ($request->shipping_address);
-        // $product->price = ($request->price);
-        // $product->save();
-
-        // return view('frontend/sukses_orders_product');
-
+        $products = Product::all();
+        return view('frontend/payproduct', compact('products'));
     }
 }

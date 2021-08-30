@@ -18,7 +18,9 @@
                 <h5><strong>Pay your order</strong></h5>
             </div>
             <div class="form-group">
-                <input type="text" name="order_no" class="form-control" placeholder="Order no">
+                @foreach($prepaids as $item)
+                <input type="text" name="order_no" class="form-control" placeholder="Order no" value={{$item->id}}>
+                @endforeach
             </div>
             <div class="form-group" style="padding-top: 30%;">
                 <button type="submit" class="btn btn-primary btn-block">Pay now</button>
